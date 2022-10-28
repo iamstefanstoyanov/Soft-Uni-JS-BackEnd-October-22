@@ -1,0 +1,21 @@
+{{#if errors}}
+<div>
+    <div class="errorContainer">
+        {{#each errors}}
+        <p>{{this}}</p>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+    <section class="login-form-container">
+
+        <form method="post" action="/auth/login">
+            <h3>Login</h3>
+            <label>Email</label>
+            <input type="email" name="email" class="box" value="{{body.email}}">
+            <label>Password</label>
+            <input type="password" name="password" class="box">
+            <input type="submit" value="Login" class="btn">
+            <p>Don't have an account ? <a href="/auth/register">Create one</a></p>
+        </form>
+    </section>

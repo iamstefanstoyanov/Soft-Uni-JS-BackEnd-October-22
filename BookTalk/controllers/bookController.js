@@ -18,7 +18,7 @@ bookController.get('/:id/details', async (req, res) => {
     });
   }else{
     book.isGuest = true
-    res.render('guestDetails', {
+    res.render('details', {
       title: 'Book Details',
       book
     });
